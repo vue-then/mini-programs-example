@@ -1,10 +1,11 @@
+<!--  wx:key="*this" 始终选中本身 不随index改变而改变 -->
 <block wx:for="{{arr}}" wx:key="*this" wx:for-item="data" wx:for-index="idx">
   <view>
-    <checkbox/>{{data}}</view>
+    <checkbox/>{{idx}}{{data}}</view>
 </block>
 <button bind:tap="sort">随机排序</button>
 
-
+<!-- 利用对象里面id为 保持本身选择状态不随随机排序而改变 -->
 <block wx:for="{{arrObj}}" wx:key="id">
   <view>
     <checkbox/>{{item.name}}</view>
